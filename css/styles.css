@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+
+	color: blanchedalmond;
+
+	background-image: url('https://res.cloudinary.com/mykb/image/upload/v1573674995/bg1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+.header .header-info {
+	text-align: center;
+	margin: 50px auto;
+	padding: 0 10px;
+}
+
+.header-input {
+	display: flex;
+	justify-content: center;
+	padding: 0 50px;
+}
+
+button[type='submit'] {
+	padding: 15px 30px;
+	background: #007bff;
+	color: whitesmoke;
+	border-radius: 5px;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.header-input input[type='text'] {
+	width: 600px;
+	height: 55px;
+	padding: 5px 10px;
+	margin-right: 10px;
+	border: none;
+	border-radius: 1px;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.header-info h1 {
+	font-size: 36px;
+}
+
+.header-info p {
+	font-size: 18px;
+}
+@media (min-width: 20rem) and (max-width: 48rem) {
+}
+
+@media (min-width: 48rem) and (max-width: 62rem) {
+}
