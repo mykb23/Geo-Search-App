@@ -154,6 +154,33 @@ button[type='submit'] {
 	margin-top: 5px;
 	color: #fff;
 }
+
+#temp-display {
+	cursor: pointer;
+	position: relative;
+}
+
+#temp-checkbox {
+	display: none;
+}
+
+#temp-checkbox + #temp-display:before {
+	content: '32 C';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#temp-checkbox:checked ~ #temp-display:after {
+	content: '52 F';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.911);
+}
 @media (min-width: 20rem) and (max-width: 48rem) {
 	.content {
 		display: grid;
