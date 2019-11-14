@@ -36,6 +36,7 @@ button[type='submit'] {
 	font-family: 'Nunito', sans-serif;
 	font-weight: bold;
 	font-size: 20px;
+	border-radius: 50px;
 }
 
 .header-input input[type='text'] {
@@ -59,25 +60,117 @@ button[type='submit'] {
 }
 
 .content {
-	padding: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	padding: 50px 80px;
 }
+
+.details {
+	background: url('https://res.cloudinary.com/mykb/image/upload/v1573674995/bg1.jpg');
+	background-position: bottom center;
+	height: 220px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 30px;
+}
+
 .view-map {
 	height: 400px;
-	width: 50%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin: 0 auto;
 }
 
 #map {
 	height: 100%;
-	/* background-color: #007bff; */
 	background: url('https://res.cloudinary.com/mykb/image/upload/v1573736002/map.jpg');
 }
+
+.header-details {
+	background: rgba(85, 105, 143, 0.294);
+	height: 140px;
+	justify-content: center;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding: 10px;
+}
+
+.header-details img {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	align-items: center;
+	border-radius: 50%;
+}
+.header-content-details {
+	text-align: center;
+	padding: 0 50px;
+}
+
+.main-details {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+
+.main-details .info-wind {
+	flex-basis: 0;
+	flex-grow: 1;
+	align-items: center;
+	padding: 10px 20px 20px 20px;
+}
+
+.main-details .wind-details {
+	display: flex;
+	padding-top: 5px;
+}
+
+.main-details .wind-details h5 {
+	margin-top: 5px;
+}
+
+.main-details .wind-details .value {
+	margin-left: 5px;
+}
+
+.main-details .info {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 0;
+	flex-grow: 1;
+	align-items: center;
+	padding: 20px;
+}
+
+.main-details .info-wind .title,
+.main-details .info .title {
+	font-size: 1rem;
+	flex-grow: 1;
+	font-weight: bold;
+	color: #777;
+}
+
+.main-details .info-wind .value,
+.main-details .info .value {
+	font-size: 1rem;
+	margin-top: 5px;
+	color: #fff;
+}
 @media (min-width: 20rem) and (max-width: 48rem) {
+	.content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		padding: 20px 30px;
+	}
 	.view-map {
 		width: 100%;
 	}
 }
 
 @media (min-width: 48rem) and (max-width: 62rem) {
+	.content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		padding: 20px 30px;
+	}
 }
