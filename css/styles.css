@@ -8,10 +8,7 @@
 body {
 	overflow-x: hidden;
 	color: blanchedalmond;
-	background: linear-gradient(to right, #047ceb, #224afc);
-	background-image: url('https://res.cloudinary.com/mykb/image/upload/v1573674995/bg1.jpg');
-	/* /* background-repeat: no-repeat; */
-	background-size: cover;
+	background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
 }
 
 .header .header-info {
@@ -28,7 +25,7 @@ body {
 
 button[type='submit'] {
 	padding: 15px 30px;
-	background: #007bff;
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 	color: whitesmoke;
 	border-radius: 5px;
 	font-family: 'Nunito', sans-serif;
@@ -65,8 +62,7 @@ button[type='submit'] {
 }
 
 .details {
-	background: url('https://res.cloudinary.com/mykb/image/upload/v1573674995/bg1.jpg');
-	background-position: bottom center;
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 	height: 220px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 30px;
@@ -154,14 +150,14 @@ button[type='submit'] {
 
 #temp-display {
 	cursor: pointer;
-	position: relative;
+	/* position: relative; */
 }
 
-#temp-checkbox {
+/* #temp-checkbox {
 	display: none;
-}
+} */
 
-#temp-checkbox + #temp-display:before {
+/* #temp-checkbox + #temp-display:before {
 	content: '32 C';
 	top: 0;
 	left: 0;
@@ -177,17 +173,13 @@ button[type='submit'] {
 	right: 0;
 	bottom: 0;
 	background: rgba(0, 0, 0, 0.911);
-}
+} */
 @media (min-width: 20rem) and (max-width: 48rem) {
-	body {
-		background-size: cover;
-		height: 100vh;
-	}
 	.content {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 1rem;
-		padding: 20px 30px;
+		padding: 20px 40px;
 	}
 	.header-input input[type='text'] {
 		width: 250px;
@@ -195,9 +187,6 @@ button[type='submit'] {
 }
 
 @media (min-width: 48rem) and (max-width: 62rem) {
-	body {
-		height: 100vh;
-	}
 	.content {
 		display: grid;
 		grid-template-columns: 1fr;
