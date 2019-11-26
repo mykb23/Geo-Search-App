@@ -47,6 +47,9 @@
 			>
 		</div>
 		<section class="content">
+			<div class="view-map">
+				<div id="map"></div>
+			</div>
 			<div class="details">
 				<div class="header-details">
 					<div class="header-content-details">
@@ -55,9 +58,8 @@
 							alt="weather icon"
 							id="img"
 						/>
-						<div class="desc">
-							<p class="desc" id="desc">Description</p>
-						</div>
+						<p class="desc" id="desc">Description</p>
+						<div class="desc"></div>
 						<h2 class="location_name" id="place">Ikeja</h2>
 					</div>
 				</div>
@@ -75,13 +77,11 @@
 					</div>
 					<div class="info">
 						<h3 class="title">Temperature</h3>
-						<input type="checkbox" id="temp-checkbox" />
-						<label for="temp-checkbox" id="temp-display"></label>
+						<!-- <input type="checkbox" id="temp-checkbox" />
+						<label for="temp-checkbox" id="temp-display"></label> -->
+						<h6 class="value" id="temp-display">TBD</h6>
 					</div>
 				</div>
-			</div>
-			<div class="view-map">
-				<div id="map"></div>
 			</div>
 		</section>
 		<script src="./js/jquery-3.4.1.slim.min.js"></script>
