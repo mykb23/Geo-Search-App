@@ -1,4 +1,5 @@
 const searchInput = document.querySelector('.header-input-text');
+const tempValue = document.querySelector('#temp-display');
 let button = document.querySelector('#header-btn');
 
 let lat;
@@ -73,15 +74,17 @@ function createMarker(place) {
  * @returns {object} data
  */
 
-function getWeather() {
+function getWeather(lat, long) {
 	const apiKey = '66c75675a603aa46329b2a064c9566e7';
 	let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
 
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data);
 			setUI(data);
+			convertToCelsius(data.main.temp);
+			convertToFahrenheit(data.main.temp);
+			console.log(data);
 		})
 		.catch(e => console.log(e));
 }
@@ -97,16 +100,47 @@ function setUI(data) {
 	const description = document.querySelector('#desc');
 	const place = document.querySelector('#place');
 	const image = document.querySelector('#img');
-	const imgUrl = 'http://openweathermap.org/img/w/';
-	const tempValue = document.querySelector('#temp-display');
+	const imgUrl = 'https://openweathermap.org/img/w/';
 
 	humiValue.textContent = data.main.humidity + '%';
-	tempValue.textContent = data.main.temp;
 	speedValue.textContent = data.wind.speed + 'm/s';
 	img = data.weather[0].icon;
 	place.textContent = data.name + ',' + data.sys.country;
 	image.src = imgUrl + img + '.png';
 	description.textContent = data.weather[0].description;
+}
+
+/**
+ *  * Convert temperature to celsius
+ *
+ * @param {object} data
+ *
+ * @returns {string} celsius
+ */
+function convertToCelsius(data) {
+	const deg = '\xB0C';
+	kTemp = data;
+	celsius = Math.floor(kTemp - 273.15);
+	celsius += deg;
+	tempValue.textContent = celsius;
+	console.log(celsius);
+}
+
+/**
+ * Convert temperature to fahrenheit
+ *
+ * @param {object} data
+ *
+ * @returns {string} fahrenheit
+ */
+
+function convertToFahrenheit(data) {
+	const fah = '\xB0F';
+	// let weather = data;
+	kTemp = data;
+	fahrenheit = Math.floor((kTemp - 273.15) * 1.8 + 32);
+	fahrenheit += fah;
+	console.log(fahrenheit);
 }
 
 /**
