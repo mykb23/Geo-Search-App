@@ -123,7 +123,6 @@ function convertToCelsius(data) {
 	celsius = Math.floor(kTemp - 273.15);
 	celsius += deg;
 	tempValue.textContent = celsius;
-	console.log(celsius);
 }
 
 /**
@@ -136,11 +135,22 @@ function convertToCelsius(data) {
 
 function convertToFahrenheit(data) {
 	const fah = '\xB0F';
-	// let weather = data;
 	kTemp = data;
 	fahrenheit = Math.floor((kTemp - 273.15) * 1.8 + 32);
 	fahrenheit += fah;
-	console.log(fahrenheit);
+}
+
+/**
+ * Toggle Temperature function
+ *
+ */
+
+function toggleTemp() {
+	if (tempValue.textContent == celsius) {
+		tempValue.textContent = fahrenheit;
+	} else {
+		tempValue.textContent = celsius;
+	}
 }
 
 /**
