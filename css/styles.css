@@ -7,13 +7,12 @@
 
 body {
 	overflow-x: hidden;
-
 	color: blanchedalmond;
-
 	background-image: url('https://res.cloudinary.com/mykb/image/upload/v1573674995/bg1.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
+	height: auto;
+	/* width: 0%; */
 }
 
 .header .header-info {
@@ -190,14 +189,11 @@ button[type='submit'] {
 		grid-gap: 1rem;
 		padding: 20px 30px;
 	}
-	.view-map {
-		width: 100%;
-	}
 }
 
 @media (min-width: 48rem) and (max-width: 62rem) {
 	body {
-		/* height: auto; */
+		height: auto;
 	}
 	.content {
 		display: grid;
